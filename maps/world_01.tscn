@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ccy4k8ehwxt1n"]
+
+[ext_resource type="PackedScene" uid="uid://d2wc7xn58dulc" path="res://player/player.tscn" id="1_8ab4x"]
+
+[node name="World" type="Node2D" unique_id=234704521]
+
+[node name="Player" parent="." unique_id=961969428 instance=ExtResource("1_8ab4x")]
+position = Vector2(180, 540)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=882569737]
+anchor_mode = 0
