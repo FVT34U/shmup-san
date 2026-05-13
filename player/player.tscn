@@ -9,9 +9,13 @@ radius = 4.0
 [node name="Player" type="CharacterBody2D" unique_id=961969428]
 script = ExtResource("1_rkbax")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1938268364]
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1938268364]
+unique_name_in_owner = true
 position = Vector2(0, -4)
 texture = ExtResource("1_oul6g")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=573565204]
 shape = SubResource("CircleShape2D_14wd4")
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=1420071390]
+position = Vector2(0, -18)

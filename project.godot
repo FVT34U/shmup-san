@@ -13,12 +13,14 @@ config_version=5
 config/name="shmup-san"
 run/main_scene="uid://ccy4k8ehwxt1n"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0.016100721, 0.007458302, 0.10176363, 1)
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=360
 window/size/viewport_height=640
+window/handheld/orientation=1
 
 [input]
 
