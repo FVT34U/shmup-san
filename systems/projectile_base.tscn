@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cpmybfw0c3fte"]
+
+[ext_resource type="Script" uid="uid://dtcqmn7yad73y" path="res://systems/projectile_base.gd" id="1_1tg5v"]
+[ext_resource type="Texture2D" uid="uid://c0wh61e8r31hm" path="res://assets/Warped shooting fx files/Assets/Pixelart/spark/sprites/spark-preview3.png" id="2_upcvy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ekg2"]
+radius = 5.0
+
+[node name="ProjectileBase" type="CharacterBody2D" unique_id=1444710433]
+collision_layer = 2
+script = ExtResource("1_1tg5v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124933489]
+position = Vector2(-1, 11)
+rotation = -1.5707964
+texture = ExtResource("2_upcvy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2140627646]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_3ekg2")
