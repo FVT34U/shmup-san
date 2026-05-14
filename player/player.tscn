@@ -10,6 +10,7 @@ radius = 4.0
 
 [node name="Player" type="CharacterBody2D" unique_id=961969428]
 script = ExtResource("1_rkbax")
+attack_speed = 0.33
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1938268364]
 unique_name_in_owner = true
@@ -28,3 +29,6 @@ unique_name_in_owner = true
 script = ExtResource("3_yw30f")
 object = ExtResource("4_qjkh3")
 metadata/_custom_type_script = "uid://bewcgcxxb45mr"
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=1046777684]
+unique_name_in_owner = true
