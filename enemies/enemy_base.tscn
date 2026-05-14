@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cgy788i1vckep"]
+
+[ext_resource type="Script" uid="uid://bmf82lfti5mu4" path="res://enemies/enemy_base.gd" id="1_tllp7"]
+[ext_resource type="Texture2D" uid="uid://bx30x2dl5e4fj" path="res://assets/Lunar Lander Upload/Ships/Spaceships.png" id="2_6dmn1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yyc73"]
+
+[node name="EnemyBase" type="CharacterBody2D" unique_id=396743785]
+script = ExtResource("1_tllp7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=115785486]
+rotation = 1.5707964
+texture = ExtResource("2_6dmn1")
+region_enabled = true
+region_rect = Rect2(20, 24, 19, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1100376767]
+shape = SubResource("CircleShape2D_yyc73")
