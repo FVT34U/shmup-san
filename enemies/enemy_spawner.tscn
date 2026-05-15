@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dvc1u0581oec"]
+
+[ext_resource type="PackedScene" uid="uid://cgy788i1vckep" path="res://enemies/enemy_base.tscn" id="1_mjbfh"]
+[ext_resource type="Script" uid="uid://fuesijxnrrr4" path="res://enemies/enemy_spawner.gd" id="2_531ly"]
+
+[node name="EnemySpawner" unique_id=396743785 instance=ExtResource("1_mjbfh")]
+script = ExtResource("2_531ly")
+attack_speed = 1.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=115785486]
+texture = null
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1100376767]
+disabled = true
+
+[node name="SpawnTimer" type="Timer" parent="." index="2" unique_id=1776539554]
+unique_name_in_owner = true
