@@ -6,9 +6,13 @@ class_name ObjectPool
 
 var pool: Array[Node2D] = []
 var _object_script: Script = null
+var pool_owner: Node2D = null
 
 
-func init_pool(world: World):
+func init_pool(world: World, owner: Node2D):
+	if not owner: push_error("Pool owner is null")
+	pool_owner = owner
+	
 	var temp := object.instantiate()
 	_object_script = temp.get_script()
 	temp.free()

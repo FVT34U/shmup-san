@@ -3,6 +3,9 @@ class_name ProjectileBase
 
 @export var speed: float = 500.0
 @export var lifetime: float = 1.0
+@export var damage: float = 25.0
+
+@onready var hurt_box: Area2D = %HurtBox
 
 var pool: ObjectPool = null
 var can_move: bool = false
@@ -31,9 +34,19 @@ func sleep():
 
 func process_lifetime():
 	await get_tree().create_timer(lifetime).timeout
-	pool.return_object_to_pool(self)
+	if pool: pool.return_object_to_pool(self)
 	
 	return
+
+
+func _on_body_entered(body: Node2D):
+	if body.has_method("take_damage") and pool:
+		body.take_damage(pool.pool_owner, damage)
+	if pool: pool.return_object_to_pool(self)
+
+
+func _ready() -> void:
+	hurt_box.body_entered.connect(_on_body_entered)
 
 
 func _physics_process(delta: float) -> void:

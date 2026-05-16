@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c88haw3x7o48t" path="res://player/Player.png" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://qnxa066mmmvn" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://bewcgcxxb45mr" path="res://systems/object_pool.gd" id="3_yw30f"]
-[ext_resource type="PackedScene" uid="uid://cpmybfw0c3fte" path="res://systems/projectile_base.tscn" id="4_qjkh3"]
+[ext_resource type="PackedScene" uid="uid://djlmfji83alum" path="res://systems/projectile_player.tscn" id="4_yw30f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_14wd4"]
 radius = 4.0
@@ -28,7 +28,7 @@ position = Vector2(0, -18)
 [node name="ProjectilePool" type="Node" parent="." unique_id=676611085]
 unique_name_in_owner = true
 script = ExtResource("3_yw30f")
-object = ExtResource("4_qjkh3")
+object = ExtResource("4_yw30f")
 metadata/_custom_type_script = "uid://bewcgcxxb45mr"
 
 [node name="AttackTimer" type="Timer" parent="." unique_id=1046777684]

@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var speed: float = 200.0
-@export var health: int = 3
+@export var health: float = 3.0
 @export var attack_speed: float = 0.5
 
 @onready var world: World = get_parent()
@@ -12,7 +12,7 @@ class_name Player
 @onready var attack_timer: Timer = %AttackTimer
 
 var can_attack: bool = true
-
+var cur_health: float = 3.0
 
 func attack():
 	if not can_attack: return
@@ -33,8 +33,20 @@ func disable_attack_for_time(disable_time: float):
 	return
 
 
+func take_damage(instigator: Node2D, damage: float):
+	if cur_health <= 0.0: return
+	
+	cur_health = maxf(0.0, cur_health - damage)
+	
+	if cur_health <= 0.0:
+		queue_free()
+		return
+
+
 func _ready() -> void:
-	pool.init_pool(world)
+	cur_health = health
+	
+	pool.init_pool(world, self)
 	
 	attack_timer.one_shot = false
 	attack_timer.autostart = false

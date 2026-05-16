@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cr8swpttba08b"]
+
+[ext_resource type="PackedScene" uid="uid://cgy788i1vckep" path="res://enemies/enemy_base.tscn" id="1_4v5hg"]
+[ext_resource type="Script" uid="uid://cvdxhdy51xk11" path="res://enemies/enemy_light.gd" id="2_a5b5d"]
+
+[node name="EnemyLight" unique_id=396743785 instance=ExtResource("1_4v5hg")]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("2_a5b5d")
+health = 50.0
+speed = 250.0

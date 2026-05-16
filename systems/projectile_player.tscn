@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://djlmfji83alum"]
+
+[ext_resource type="PackedScene" uid="uid://cpmybfw0c3fte" path="res://systems/projectile_base.tscn" id="1_r48ch"]
+
+[node name="ProjectilePlayer" unique_id=1444710433 instance=ExtResource("1_r48ch")]
+
+[node name="HurtBox" parent="." index="2" unique_id=732884261]
+collision_mask = 2
